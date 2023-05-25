@@ -47,37 +47,24 @@ def print_singly_linked_list(node, sep, fptr):
 #
 #
 def mergeLists(head1, head2):
-    list_three = SinglyLinkedList()
-    node_1 = head1.data
-    node_2 = head2.data
-    track = 0
-    while track <10:
-        # print(track, node_1, node_2)
-        if node_1 and node_2:
-            if node_1 < node_2:
-                print("Insert node 1")
-                list_three.insert_node(node_1)
-                node_1 = head1.next.data
-            elif node_1 > node_2:
-                list_three.insert_node(node_2)
-                node_2 = head2.next.data
-            elif node_1 == node_2:
-                list_three.insert_node(node_1)
-                list_three.insert_node(node_2)
-                node_1 = head1.next.data
-                node_2 = head2.next.data
-        elif node_2 and not node_1 :
-            list_three.insert_node(node_2)
-            node_2 = head2.next.data
-        elif node_1 and not node_2:
-            list_three.insert_node(node_1)
-            node_1 = head1.next.data
-        else:
-            break
+    list3 = SinglyLinkedList()
+    list1 = []
+    list2 = []
+    while head1:
+        list1.append(head1.data)
+        head1 = head1.next
 
-        track += 1
-    
-    return list_three
+    while head2:
+        list2.append(head2.data)
+        head2 = head2.next
+
+    l3 = sorted(list1+list2)
+
+    print(l3)
+
+    [list3.insert_node(i) for i in l3]
+      
+    return list3.head
 
     
 
