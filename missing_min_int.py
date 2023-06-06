@@ -1,0 +1,19 @@
+def solution(A):
+    a_list = sorted(A)
+    max_num = a_list[-1]
+    if max_num < 0:
+        return 1
+    else:
+        for idx in range(len(a_list)-1):
+            num = a_list[idx]
+            next_num = a_list[idx+1]
+            if num == next_num or num+1 == next_num:
+                pass
+            else:
+                return num+1
+    return max_num+1
+
+
+if __name__ == "__main__":
+    a = [1, 2, 3]
+    print(solution(a))
