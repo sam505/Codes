@@ -19,3 +19,12 @@ def test_two_timeConversion():
     calculated = timeConversion(s)
 
     assert actual == calculated
+
+def test_three_timeConversion():
+    s = "12:40:22AM"
+
+    actual = "00:40:22"
+
+    calculated = timeConversion(s)
+
+    assert actual == calculated
