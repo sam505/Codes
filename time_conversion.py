@@ -1,6 +1,5 @@
 def timeConversion(s):
     time_ = s.split(":")
-    print(time_)
 
     if "P" in s:
         if time_[0] != "12":
