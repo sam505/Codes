@@ -1,0 +1,2 @@
+def flippingBits(n):
+    pass
