@@ -8,3 +8,5 @@ def test_one_lonelyinteger(a):
     calculated = lonelyinteger(a)
 
     assert actual == calculated
+
+
