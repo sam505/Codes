@@ -23,3 +23,15 @@ def test_two_ceaser_cipher():
     calculated = caesarCipher(s, k)
 
     assert actual == calculated
+
+
+def test_three_ceaser_cipher():
+    s = "There's-a-starman-waiting-in-the-sky"
+
+    k = 3
+
+    actual = "Wkhuh'v-d-vwdupdq-zdlwlqj-lq-wkh-vnb"
+
+    calculated = caesarCipher(s, k)
+
+    assert actual == calculated
