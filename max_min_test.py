@@ -32,3 +32,15 @@ def test_three_max_min():
     calculated = maxMin(k, arr)
     
     assert actual == calculated
+
+    
+def test_four_max_min():
+    with open("max_min.txt", "r") as file:
+        lines = file.readlines()
+        arr = [int(line.strip()) for line in lines]
+    k = 2430
+
+    actual = 2374
+    calculated = maxMin(k, arr)
+    
+    assert actual == calculated
