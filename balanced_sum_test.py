@@ -28,3 +28,13 @@ def test_three_balanced_sum():
     calculated = balancedSums(arr)
 
     assert actual == calculated
+
+
+def test_four_balanced_sum():
+    arr = [2, 0, 0, 0]
+
+    actual = "YES"
+
+    calculated = balancedSums(arr)
+
+    assert actual == calculated
